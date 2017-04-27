@@ -143,7 +143,7 @@ function resetDatabase(db, cb) {
       // Use myself as a callback.
       resetCollection(db, collection, processNextCollection);
     } else {
-      cb();
+        addIndexes(db, cb);
     }
   }
   

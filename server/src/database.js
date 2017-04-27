@@ -223,3 +223,11 @@ setInterval(function() {
     updated = false;
   }
 }, 200);
+
+/**
+ * Adds any desired indexes to the database.
+ */
+function addIndexes(db, cb) {
+  db.collection('feedItems').createIndex({ "contents.contents": "text" }, null, cb);
+}
+
